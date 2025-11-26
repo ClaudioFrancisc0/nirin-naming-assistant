@@ -30,7 +30,4 @@ services:
     staticPublishPath: ./client/dist
     envVars:
       - key: VITE_API_URL
-        fromService:
-          type: web
-          name: nirin-naming-api
-          envVarKey: RENDER_EXTERNAL_URL
+        value: https://nirin-naming-api.onrender.com/api
