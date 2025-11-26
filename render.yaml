@@ -4,7 +4,7 @@ services:
     name: nirin-naming-api
     runtime: node
     plan: free
-    buildCommand: cd server && npm install && npx puppeteer browsers install chrome
+    buildCommand: cd server && npm install
     startCommand: cd server && node index.js
     envVars:
       - key: PORT
@@ -17,8 +17,6 @@ services:
         sync: false
       - key: NODE_ENV
         value: production
-      - key: PUPPETEER_SKIP_CHROMIUM_DOWNLOAD
-        value: false
     # Puppeteer requirements
     region: oregon
     
