@@ -1,7 +1,15 @@
 import axios from 'axios';
 
+// Get API URL from environment or use production fallback
+const API_URL = import.meta.env.VITE_API_URL ||
+    (window.location.hostname.includes('onrender.com')
+        ? 'https://nirin-naming-api.onrender.com/api'
+        : 'http://localhost:3000/api');
+
+console.log('[API] Using baseURL:', API_URL);
+
 const API = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || 'http://localhost:3000/api',
+    baseURL: API_URL,
     timeout: 180000, // 3 minutes timeout for long AI generations
 });
 
