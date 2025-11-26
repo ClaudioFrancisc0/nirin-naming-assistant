@@ -19,8 +19,6 @@ services:
         value: production
       - key: PUPPETEER_SKIP_CHROMIUM_DOWNLOAD
         value: false
-      - key: PUPPETEER_EXECUTABLE_PATH
-        value: /opt/render/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome
     # Puppeteer requirements
     region: oregon
     
