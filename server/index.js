@@ -10,7 +10,17 @@ const inpiService = require('./services/inpiService');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+// CORS configuration for production
+const corsOptions = {
+    origin: [
+        'http://localhost:5174',
+        'http://localhost:5173',
+        'https://nirin-naming-app.onrender.com'
+    ],
+    credentials: true
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Health check
