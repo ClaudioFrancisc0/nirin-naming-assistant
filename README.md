@@ -65,3 +65,4 @@ Siga o guia completo em: `render_deployment_guide.md`
 ## Suporte
 
 Para dúvidas sobre o deploy, consulte o guia ou entre em contato.
+# nirin-naming-assistant
